@@ -1,0 +1,18 @@
+import picamera
+import time
+
+# Create a PiCamera object
+camera = picamera.PiCamera()
+
+# Start a preview
+camera.start_preview()
+
+# Capture an image and display it to screen
+def capture_and_display():
+    image = camera.capture()
+    image.show()
+    time.sleep(10)
+
+# Capture and display images in a loop
+while True:
+    capture_and_display()
